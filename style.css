@@ -1,0 +1,407 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+/*Our style*/
+
+
+
+
+
+
+
+
+
+.wrapper{
+	max-width: 1920px;
+	margin: 0 auto;
+	width: 100%;
+	font-family: 'Proxima Nova Regular';
+}
+
+.center{
+	padding: 55px 0 60px;
+	max-width: 1550px;
+	margin: 0 auto;
+	width: 90%;
+}
+
+.shifted {
+	text-align: right;
+}
+
+header {
+	min-height: 100vh;
+	width: 100%;
+	background-image: url('./images/football.png');
+	background-size: cover;
+	max-height: 960px;
+	}
+
+.top-content {
+	
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-text{
+	color: #fff;
+	font-size: 14px;
+	font-family: 'Proxima Nova Light';
+	text-transform: uppercase;
+}
+
+
+header h1 {
+	font-size: 90px;
+	font-family: 'Proxima Nova Bold';
+	color: #fff;
+	margin-top: 25vh;
+}
+.top-title{
+	z-index: 2;
+	position: relative;
+
+}
+header .line {
+
+	width: 25%;
+	height: 5px;
+	background-color: #9171ea;
+	transform: rotate(-45deg);
+	position: absolute;
+	left: 30%;
+	z-index: 1;
+
+}
+
+
+header .menu{
+	text-align: right;
+}
+
+header .menu li{
+	display: inline-block;
+}
+
+header .menu li a{
+	text-decoration: none;
+	color: #9171ea;
+	font-size: 14px;
+	font-weight: 300;
+	text-transform: uppercase;
+	padding: 0 25px;
+}
+
+header .menu li a:hover{
+	color: #fff;
+}
+
+header .buttons, footer .buttons{
+	text-align: center;
+	margin-top: 30vh;
+
+}
+
+header .buttons a, footer .buttons a{
+	color: #ffffff;
+	text-decoration: none;
+	display: inline-block;
+	width: 180px;
+	font-family: 'Proxima Nova Light';
+	padding: 5px 65px 20px 43px;
+	background-color: #5e42b0;
+	border-radius: 40px;
+}
+
+header .buttons a i, footer .buttons a i{
+	font-size: 37px;
+	margin-right: 20px;
+	position: relative;
+	top: 15px;
+}
+
+header .buttons a span, footer .buttons a span{
+	margin-left: 52px;
+	font-family: 'Proxima Nova Semibold';
+}
+
+header .buttons a:first-child, footer .buttons a:first-child{
+	margin-right: 50px;
+}
+
+header .buttons a:hover, footer .buttons a:hover{
+	color: #5e42b0;
+	background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.row {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+}
+
+.row.reverse {
+	flex-direction: row-reverse;
+}
+
+.image {
+	max-width: 100%;
+	height: 100%;
+	width: auto;
+	object-fit: cover;
+}
+
+.text-box {
+	padding: 260px 20px 125px 130px;
+
+}
+
+.box {
+	flex-basis: 50%;
+	box-sizing: border-box;
+	
+}
+
+.box-number {
+	position: absolute;
+	color: #fff;
+	width: 170px;
+	height: 150px;
+	font-size: 18px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    background: #5e42b0;
+    box-sizing: border-box;
+    top: 200px;
+    left: 50%;
+	transform: translateX(-50%);
+}
+
+.box-number p {
+	position: relative;
+}
+
+.box-number p::after {
+	border-radius: 5px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -10px;
+	width: 90%;
+	height: 6px;
+	background-color: rgba(255,255,255, 0.5);
+	content: '';
+}
+.box-title{
+	color: rgb(231, 231, 231);
+	text-transform: uppercase;
+	font-size: 60px;
+	padding-bottom: 125px;
+}
+.box-text{
+	width: 100%;
+	max-width: 60%;
+	line-height: 1.5;
+	position: relative;
+}
+.box-text::after{
+	border-radius: 5px;
+	position: absolute;
+	left: 0;
+	bottom: -100px;
+	width: 15px;
+	height: 6px;
+	background-color: #5e42b0;
+	content: '';
+
+}
+
+
+
+
+
+
+.center1{
+	padding: 55px 0 60px;
+	max-width: 1550px;
+	margin: 0 auto;
+	width: 90%;
+	display: block;
+}
+
+
+	
+
+footer {
+	min-height: 100vh;
+	width: 100%;
+	background-image: url('./images/4.jpg');
+	background-size: cover;
+	max-height: 960px;
+	
+	
+
+}
+footer .h2{
+	margin-top: 7%;
+	padding-bottom: 0;
+	justify-content: center;
+	display: flex;
+	flex-direction: row;
+}
+
+.imge_class{
+display: flex;
+justify-content: flex-end;
+flex-grow: 1;
+}
+
+.image2{
+	height: 135px;
+	width: 125px;
+	border-radius: 10px;
+	justify-content: flex-end
+	
+	
+}
+
+.text1{
+	margin-left: 35px;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	justify-content: center;
+	flex-grow: 2;
+}
+
+
+
+
+.top-title1{
+	font-size: 60px;
+	font-family: 'Proxima Nova Bold';
+	color: #fff;
+	z-index: 2;
+}
+footer .line2{
+	width: 12%;
+	height: 5px;
+	background-color: #9171ea;
+	transform: rotate(-50deg);
+	position: absolute;
+	left: 29%;
+	z-index: 1;
+}
+footer .line3{
+	width: 25%;
+	height: 5px;
+	background-color: #9171ea;
+	transform: rotate(-50deg);
+	position: absolute;
+	left: 43%;
+	z-index: 1;
+}
+
+footer .p1{
+	
+	font-size: 25px;
+	font-family: 'Proxima Nova Bold';
+	color:#5e42b0;
+	
+}
+
+
+.bottom-content1 {
+	background-color: rgba(11, 17, 51, 0.5);
+	height: 25%;
+	margin: 0 5% ;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+	flex-grow: 1;
+	
+}
+
+.bottom-text{
+	color: #fff;
+	font-size: 14px;
+	font-family: 'Proxima Nova Light';
+	text-transform: capitalize;
+}
+.icons{
+	justify-content: space-between;
+	align-items: stretch;
+	color: #ffffff;
+}
+
+.bottom-title{
+	z-index: 2;
+	position: relative;
+
+}
+
+
+
